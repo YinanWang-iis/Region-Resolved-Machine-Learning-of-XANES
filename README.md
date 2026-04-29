@@ -1,9 +1,5 @@
 # Decoding Dopant-Induced Electronic Modulation in Graphene via Region-Resolved Machine Learning of XANES
 
-Code for the paper:
-
-> Yinan Wang, Arpita Varadwaj, Teruyasu Mizoguchi, Masato Kotsugi. *Decoding Dopant-Induced Electronic Modulation in Graphene via Region Resolved Machine Learning of XANES*. [Journal, Year. DOI: to be added]
-
 ## Overview
 
 This repository provides the analysis code (`code_for_paper.ipynb`) reproducing the machine learning results in the paper. We apply PCA, Random Forest classification, and Random Forest regression to DFT-simulated carbon K-edge XANES spectra of boron- and nitrogen-doped graphene.
