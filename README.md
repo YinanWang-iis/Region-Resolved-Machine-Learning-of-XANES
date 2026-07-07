@@ -213,4 +213,6 @@ These results are used to identify which spectral regions are most informative f
 
 ## Citation
 
-If you use this dataset or workflow, please cite the associated manuscript.
+If you use this dataset or workflow, please cite the associated arxiv manuscript.
+https://doi.org/10.48550/arXiv.2603.29370
+
