@@ -222,6 +222,10 @@ Executing the workflow from Section 5 onward generates the following outputs:
 - The released processed datasets are sufficient to reproduce the machine-learning analyses from Section 5 onward.
 - Sections 1–4 document the preprocessing workflow and may be used to regenerate the processed datasets when the raw simulated spectra are available.
 
+## Additional Analysis
+
+-Additional analyses, including baseline-model comparisons, UMAP/t-SNE visualizations, and standard XANES descriptor comparisons, are documented in additional_analysis_README.md
+
 ## Citation
 
 If you use this dataset or workflow, please cite the associated arxiv manuscript.
