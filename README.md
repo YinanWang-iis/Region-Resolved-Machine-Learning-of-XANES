@@ -217,8 +217,7 @@ Executing the workflow from Section 5 onward generates the following outputs:
 ## Notes on reproducibility
 
 - Random seeds are fixed where applicable to ensure reproducible results.
-- Spectral features are selected by energy-window names, not by positional column
-  indices.
+- Spectral features are selected using named energy windows rather than positional column indices.
 - Grouped validation uses parsed `configuration_id` values so that spectra from the
   same configuration remain in the same fold.
 - The released processed dataset is sufficient to reproduce the machine-learning
