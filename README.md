@@ -207,7 +207,7 @@ and [Data dictionary](#data-dictionary) above):
 
 ### Workflow Outputs
 
-Running the notebook from Section 5 onward reproduces:
+Executing the workflow from Section 5 onward generates the following outputs:
 
 - classification accuracy, F1 score, and fold-to-fold standard deviation;
 - regression R², RMSE, and MAE for `mbl` and `bader`;
