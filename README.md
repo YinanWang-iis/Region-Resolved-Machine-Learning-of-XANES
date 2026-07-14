@@ -209,10 +209,10 @@ and [Data dictionary](#data-dictionary) above):
 
 Executing the workflow from Section 5 onward generates the following outputs:
 
-- classification accuracy, F1 score, and fold-to-fold standard deviation;
-- regression R², RMSE, and MAE for `mbl` and `bader`;
-- a PCA visualization separating pristine, B-doped, and N-doped graphene spectra;
-- energy-resolved feature-importance profiles for each prediction task.
+- Classification performance (accuracy, F1 score, and fold-to-fold standard deviation)
+- Regression performance (R², RMSE, and MAE for mbl and bader prediction)
+- PCA visualization of pristine, B-doped, and N-doped graphene spectra
+- Energy-dependent feature-importance profiles for each prediction task
 
 ## Notes on reproducibility
 
