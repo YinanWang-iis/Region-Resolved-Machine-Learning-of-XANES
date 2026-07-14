@@ -224,7 +224,7 @@ Executing the workflow from Section 5 onward generates the following outputs:
 
 ## Additional Analysis
 
--Additional analyses, including baseline-model comparisons, UMAP/t-SNE visualizations, and standard XANES descriptor comparisons, are documented in additional_analysis_README.md
+ - Additional analyses, including baseline-model comparisons, UMAP/t-SNE visualizations, and standard XANES descriptor comparisons, are documented in additional_analysis_README.md
 
 ## Citation
 
