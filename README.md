@@ -10,23 +10,14 @@ The main executable file is:
 public_reproducibility_workflow.ipynb
 ```
 
-## Important note: where to start
+## Workflow Overview
 
-The released repository already includes the processed data files. Therefore, to
-reproduce the results, start running the notebook from **Section 5:
-"Interpolate to a common energy grid"**.
-
-Sections 1–4 document the preprocessing pipeline from raw `.dat` spectra to
-`data.csv`. They are included for transparency and should only be executed if raw
-simulated spectra are available locally.
-
-```text
-If using released processed data:
-    start from Section 5
-
-If regenerating data from raw spectra:
-    run Sections 1–4 first, then continue from Section 5
-```
+The released repository already includes the processed datasets required to
+reproduce the machine-learning analyses reported in the manuscript. Users
+reproducing the published results can begin from Section 5 ("Interpolate to a
+common energy grid") of the notebook. Sections 1–4 document the preprocessing
+pipeline from the raw simulated spectra to the processed datasets and are only
+required when regenerating the processed data.
 
 ## Installation
 
@@ -40,30 +31,27 @@ conda activate xanes-ml
 pip install numpy pandas scipy scikit-learn matplotlib jupyter openpyxl
 ```
 
-## Running the workflow
+## Workflow Execution
 
-Open the notebook:
+Open the reproducibility notebook:
 
 ```bash
 jupyter lab public_reproducibility_workflow.ipynb
 ```
 
-Then start execution from:
+To reproduce the machine-learning analyses reported in the manuscript, begin
+execution from Section 5 ("Interpolate to a common energy grid").
 
-```text
-Section 5. Interpolate to a common energy grid
-```
-
-The sections needed to reproduce the manuscript's main results are:
+The main workflow consists of the following sections:
 
 | Section | Purpose |
 |---|---|
-| 5 | Interpolate spectra to a common energy grid |
-| 6 | Generate data dictionary |
-| 7 | Load `data_interpolated.csv` and construct named features |
-| 9 | PCA on spectral features |
-| 10 | Define train/test and grouped-validation splits |
-| 11 | Random-forest manuscript experiments |
+| 5 | Interpolate spectra onto a common energy grid |
+| 6 | Generate the data dictionary |
+| 7 | Load `data_interpolated.csv` and construct named spectral features |
+| 9 | Perform principal component analysis (PCA) |
+| 10 | Define concentration-stratified and configuration-grouped validation protocols |
+| 11 | Perform the random-forest analyses reported in the manuscript |
 
 The notebook contains a Boolean flag controlling the main experiments:
 
@@ -71,9 +59,9 @@ The notebook contains a Boolean flag controlling the main experiments:
 RUN_RF_EXPERIMENTS = True
 ```
 
-Additional analyses (baseline-model comparisons, UMAP/t-SNE, standard XANES
-descriptor comparisons) were prepared for reviewer response and are documented
-separately in [`additional_analysis/README.md`](additional_analysis/README.md).
+Additional analyses, including baseline-model comparisons, UMAP/t-SNE
+visualizations, and standard XANES descriptor comparisons, are documented in
+[`additional_analysis/README.md`](additional_analysis/README.md).
 
 ## Dataset structure
 
@@ -100,6 +88,8 @@ These are followed by metadata and target columns.
 - machine-learning features are the interpolated intensity values only.
 
 ## Data dictionary
+
+The following fields are used throughout the machine-learning workflow:
 
 | Field | Meaning |
 |---|---|
@@ -129,7 +119,9 @@ positional column slicing.
 | `FULL` | 265.0–290.0 eV |
 
 Only interpolated intensity values inside these windows are used as spectral
-features.
+features. The high-energy terminal region affected by the artificial intensity
+decay associated with the finite number of unoccupied states in the XANES
+calculations is excluded during feature construction.
 
 ## Splitting protocols
 
@@ -191,13 +183,36 @@ These results are used to identify which spectral regions are most informative f
 - mean dopant–carbon bond-length regression;
 - mean Bader-charge regression.
 
-## Expected outputs (main workflow)
+## Repository contents and workflow outputs
 
-| Output | Description |
+### Repository contents
+
+The repository already includes the following processed files, which serve as
+inputs to the machine-learning workflow (see [Dataset structure](#dataset-structure)
+and [Data dictionary](#data-dictionary) above):
+
+| File | Description |
 |---|---|
 | `data.csv` | Per-spectrum wide table with energy/intensity pairs and metadata. |
 | `data_interpolated.csv` | Common-grid table used for ML and dimensionality reduction. |
 | `data_dictionary.csv` | Data-column and metadata-row definitions. |
+
+### Machine-learning analyses performed
+
+- Classification of B- and N-doping concentration.
+- Regression of mean dopant–carbon bond length (`mbl`) and mean dopant Bader
+  charge (`bader`).
+- Principal component analysis (PCA) of spectral features.
+- Feature-importance analysis as a function of photon energy.
+
+### Results reproduced
+
+Running the notebook from Section 5 onward reproduces:
+
+- classification accuracy, F1 score, and fold-to-fold standard deviation;
+- regression R², RMSE, and MAE for `mbl` and `bader`;
+- a PCA visualization separating pristine, B-doped, and N-doped graphene spectra;
+- energy-resolved feature-importance profiles for each prediction task.
 
 ## Notes on reproducibility
 
@@ -215,4 +230,3 @@ These results are used to identify which spectral regions are most informative f
 
 If you use this dataset or workflow, please cite the associated arxiv manuscript.
 https://doi.org/10.48550/arXiv.2603.29370
-
