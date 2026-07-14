@@ -205,7 +205,7 @@ and [Data dictionary](#data-dictionary) above):
 - Principal component analysis (PCA) of spectral features.
 - Feature-importance analysis as a function of photon energy.
 
-### Results reproduced
+### Workflow Outputs
 
 Running the notebook from Section 5 onward reproduces:
 
