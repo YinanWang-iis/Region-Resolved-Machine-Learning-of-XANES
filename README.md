@@ -36,7 +36,7 @@ pip install numpy pandas scipy scikit-learn matplotlib jupyter openpyxl
 Open the reproducibility notebook:
 
 ```bash
-jupyter lab public_reproducibility_workflow.ipynb
+jupyter lab Region-Resolved-Machine-Learning-of-XANES.ipynb
 ```
 
 To reproduce the machine-learning analyses reported in the manuscript, begin
