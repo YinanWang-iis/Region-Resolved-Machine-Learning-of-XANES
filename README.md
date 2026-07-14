@@ -1,4 +1,4 @@
-# Region-resolved ML analysis of C K-edge XANES in doped graphene
+# Region-resolved Machine Learning analysis of Carbon K-edge XANES in doped graphene
 
 This repository provides the public reproducibility workflow for the manuscript on
 region-resolved machine-learning analysis of DFT-simulated C K-edge XANES spectra of
@@ -7,7 +7,7 @@ B- and N-doped graphene.
 The main executable file is:
 
 ```text
-public_reproducibility_workflow.ipynb
+Region-Resolved-Machine-Learning-of-XANES.ipynb
 ```
 
 ## Workflow Overview
