@@ -218,12 +218,9 @@ Executing the workflow from Section 5 onward generates the following outputs:
 
 - Random seeds are fixed where applicable to ensure reproducible results.
 - Spectral features are selected using named energy windows rather than positional column indices.
-- Grouped validation uses parsed `configuration_id` values so that spectra from the
-  same configuration remain in the same fold.
-- The released processed dataset is sufficient to reproduce the machine-learning
-  analyses from Section 5 onward.
-- Sections 1–4 are retained to document how the processed tables can be regenerated
-  when raw spectra are available.
+- Configuration-grouped validation uses configuration_id to ensure that spectra originating from the same atomic configuration are assigned to the same validation fold.
+- The released processed datasets are sufficient to reproduce the machine-learning analyses from Section 5 onward.
+- Sections 1–4 document the preprocessing workflow and may be used to regenerate the processed datasets when the raw simulated spectra are available.
 
 ## Citation
 
