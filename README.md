@@ -197,7 +197,6 @@ and [Data dictionary](#data-dictionary) above):
 |---|---|
 | `data.csv` | Per-spectrum wide table with energy/intensity pairs and metadata. |
 | `data_interpolated.csv` | Common-grid table used for ML and dimensionality reduction. |
-| `data_dictionary.csv` | Data-column and metadata-row definitions. |
 
 ### Machine-learning analyses performed
 
