@@ -61,7 +61,7 @@ RUN_RF_EXPERIMENTS = True
 
 Additional analyses, including baseline-model comparisons, UMAP/t-SNE
 visualizations, and standard XANES descriptor comparisons, are documented in
-[`additional_analysis/README.md`](additional_analysis/README.md).
+[`additional_analysis_README.md`](additional_analysis_README.md).
 
 ## Dataset structure
 
