@@ -170,7 +170,7 @@ PCA is applied to the spectral features to visualize the separation between
 pristine, B-doped, and N-doped graphene spectra.
 
 (UMAP and t-SNE projections are provided as supplementary comparisons; see
-[`additional_analysis/README.md`](additional_analysis/README.md).)
+[`additional_analysis_README.md`](additional_analysis_README.md).)
 
 ## Feature-importance analysis
 
