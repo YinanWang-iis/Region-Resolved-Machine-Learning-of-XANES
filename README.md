@@ -47,7 +47,7 @@ The main workflow consists of the following sections:
 | Section | Purpose |
 |---|---|
 | 5 | Interpolate spectra onto a common energy grid |
-| 6 | Generate the data dictionary |
+| 6 | Define and display the data dictionary |
 | 7 | Load `data_interpolated.csv` and construct named spectral features |
 | 9 | Perform principal component analysis (PCA) |
 | 10 | Define concentration-stratified and configuration-grouped validation protocols |
@@ -88,6 +88,8 @@ These are followed by metadata and target columns.
 - machine-learning features are the interpolated intensity values only.
 
 ## Data dictionary
+
+The data dictionary is provided directly in this section and is also defined and displayed programmatically in Section 6 of the main notebook. It is not distributed as a separate CSV file and is not required as an input to the machine-learning workflow.
 
 The following fields are used throughout the machine-learning workflow:
 
